@@ -1,4 +1,4 @@
-# 🏭 ForgeIQ
+# ForgeIQ
 ### AI-Powered Industrial Knowledge Intelligence Platform
 #### Unified Asset & Operations Brain
 
