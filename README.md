@@ -203,8 +203,12 @@ AI Response with Sources
 
 ---
 
-# Screenshots
+# Demo Video
 
+Watch the complete project demonstration here:
+
+🔗 **Demo Video:**  
+[https://drive.google.com/file/d/1y7M3kvmhTaCAuWs5iVz-A9jz2QLO-nl8/view?usp=sharing](https://drive.google.com/file/d/1y7M3kvmhTaCAuWs5iVz-A9jz2QLO-nl8/view?usp=sharing)
 
 
 # Roadmap
