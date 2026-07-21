@@ -1,0 +1,205 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 22px;
+  --radius-2xl: 28px;
+  --radius-3xl: 34px;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 22px;
+
+  /* ForgeIQ palette (converted to oklch-ish via hex passthrough) */
+  --background: #f5f7fa;
+  --foreground: #17202a;
+
+  --card: rgba(255, 255, 255, 0.72);
+  --card-foreground: #17202a;
+  --popover: #ffffff;
+  --popover-foreground: #17202a;
+
+  --primary: #0f4c81;
+  --primary-foreground: #ffffff;
+
+  --secondary: #2f6bff;
+  --secondary-foreground: #ffffff;
+
+  --accent: #3ba99c;
+  --accent-foreground: #ffffff;
+
+  --muted: #eef2f7;
+  --muted-foreground: #6b7280;
+
+  --destructive: #d9534f;
+  --destructive-foreground: #ffffff;
+  --success: #24b26b;
+  --warning: #f4a261;
+
+  --border: rgba(15, 76, 129, 0.10);
+  --input: rgba(15, 76, 129, 0.14);
+  --ring: #2f6bff;
+
+  --chart-1: #0f4c81;
+  --chart-2: #2f6bff;
+  --chart-3: #3ba99c;
+  --chart-4: #f4a261;
+  --chart-5: #d9534f;
+
+  --sidebar: rgba(255, 255, 255, 0.55);
+  --sidebar-foreground: #17202a;
+  --sidebar-primary: #0f4c81;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(47, 107, 255, 0.08);
+  --sidebar-accent-foreground: #0f4c81;
+  --sidebar-border: rgba(255, 255, 255, 0.45);
+  --sidebar-ring: #2f6bff;
+
+  --glass-border: rgba(255, 255, 255, 0.45);
+  --glass-shadow: 0 10px 40px -12px rgba(15, 76, 129, 0.12), 0 2px 8px -2px rgba(15, 76, 129, 0.06);
+}
+
+.dark {
+  --background: #0b1220;
+  --foreground: #e8eef7;
+  --card: rgba(23, 32, 48, 0.65);
+  --card-foreground: #e8eef7;
+  --popover: #131c2e;
+  --popover-foreground: #e8eef7;
+  --primary: #4a90d9;
+  --primary-foreground: #0b1220;
+  --secondary: #2f6bff;
+  --secondary-foreground: #ffffff;
+  --accent: #3ba99c;
+  --accent-foreground: #0b1220;
+  --muted: rgba(255, 255, 255, 0.06);
+  --muted-foreground: #98a2b3;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.12);
+  --ring: #4a90d9;
+  --sidebar: rgba(19, 28, 46, 0.65);
+  --sidebar-foreground: #e8eef7;
+  --sidebar-primary: #4a90d9;
+  --sidebar-primary-foreground: #0b1220;
+  --sidebar-accent: rgba(74, 144, 217, 0.10);
+  --sidebar-accent-foreground: #e8eef7;
+  --sidebar-border: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 10px 40px -12px rgba(0, 0, 0, 0.5);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html, body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    background-image:
+      radial-gradient(1200px 600px at 90% -10%, rgba(47, 107, 255, 0.08), transparent 60%),
+      radial-gradient(900px 500px at -10% 20%, rgba(59, 169, 156, 0.07), transparent 60%),
+      radial-gradient(700px 500px at 60% 110%, rgba(15, 76, 129, 0.06), transparent 60%);
+    background-attachment: fixed;
+  }
+}
+
+@utility glass {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 22px;
+}
+.dark .glass {
+  background: rgba(23, 32, 48, 0.55);
+}
+
+@utility glass-soft {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+}
+.dark .glass-soft {
+  background: rgba(23, 32, 48, 0.4);
+}
+
+@utility blueprint-grid {
+  background-color: #f5f7fa;
+  background-image:
+    linear-gradient(rgba(15, 76, 129, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 76, 129, 0.06) 1px, transparent 1px),
+    linear-gradient(rgba(15, 76, 129, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 76, 129, 0.03) 1px, transparent 1px);
+  background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
+}
+
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+@utility shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+  background-size: 800px 100%;
+  animation: shimmer 1.6s infinite linear;
+}
+
+@keyframes float-pulse {
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 0.5; }
+}
+@utility pulse-dot {
+  animation: float-pulse 2.4s ease-in-out infinite;
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: rgba(15, 76, 129, 0.15); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(15, 76, 129, 0.28); }
