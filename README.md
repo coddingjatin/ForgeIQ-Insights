@@ -5,7 +5,7 @@
 > **Transform fragmented industrial documents into a unified, intelligent knowledge ecosystem powered by AI, Knowledge Graphs, RAG, and Multi-Agent Intelligence.**
 
 <p align="center">
-
+ 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Next.js](https://img.shields.io/badge/Next.js-15-black)
 ![React](https://img.shields.io/badge/React-19-61DAFB)
